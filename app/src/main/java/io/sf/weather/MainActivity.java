@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         sunset = (TextView)findViewById(R.id.sunset);
 
         final WeatherModelImpl weatherModel = new WeatherModelImpl(this);
-        weatherInfo = weatherModel.getWeather(new OnWeather() {
+        weatherModel.getWeather(new OnWeather() {
             @Override
             public void onWeatherComplete(Weather weatherInfo) {
                 city.setText(weatherInfo.getCity());
